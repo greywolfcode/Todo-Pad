@@ -1,2 +1,2 @@
-# CadaPad
+# Todo Pad
 Fully Customizable Macropad
