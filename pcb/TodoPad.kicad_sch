@@ -778,19 +778,19 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SSD1306_0.91_inch_128x32_OLED_Display:SSD1306_0.91_inch_128x32_OLED_Display"
+		(symbol "SSD1306_0.91_inch_128x32_OLED_Display_1"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 0 0 0)
+				(at 0 1.778 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" ""
+			(property "Value" "SSD1306_128x32_OLED_Display"
 				(at 0 0 0)
 				(effects
 					(font
@@ -825,7 +825,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SSD1306_0.91_inch_128x32_OLED_Display_0_1"
+			(symbol "SSD1306_0.91_inch_128x32_OLED_Display_1_0_1"
 				(rectangle
 					(start -2.54 -1.27)
 					(end 2.54 -11.43)
@@ -838,7 +838,7 @@
 					)
 				)
 			)
-			(symbol "SSD1306_0.91_inch_128x32_OLED_Display_1_1"
+			(symbol "SSD1306_0.91_inch_128x32_OLED_Display_1_1_1"
 				(pin input line
 					(at 5.08 -2.54 180)
 					(length 2.54)
@@ -2131,6 +2131,28 @@
 		)
 		(uuid "f8393c02-eb37-4efb-9b54-d39d2dfd527d")
 	)
+	(global_label "Col 3"
+		(shape input)
+		(at 203.2 115.57 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "139c1e05-9d3a-4b5a-a104-3d654fe4815e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 211.4465 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Row 2"
 		(shape input)
 		(at 25.4 102.87 180)
@@ -2153,6 +2175,28 @@
 			)
 		)
 	)
+	(global_label "Row 2"
+		(shape input)
+		(at 167.64 100.33 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2c693e04-6013-4ba4-ad4a-ebd28bc8310c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 158.7282 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Col 2"
 		(shape input)
 		(at 99.06 50.8 90)
@@ -2166,6 +2210,50 @@
 		(uuid "340e12a8-9375-40be-bc68-52be631300e8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 99.06 42.5535 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Row 1"
+		(shape input)
+		(at 167.64 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4715b1f3-49b6-4ae7-99c5-a88fcdff110f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 158.7282 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Col 2"
+		(shape input)
+		(at 203.2 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4adfa4ef-725a-48d2-86b7-8df38a7ccf25")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 211.4465 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2263,6 +2351,28 @@
 			)
 		)
 	)
+	(global_label "Row 0"
+		(shape input)
+		(at 167.64 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "be6052c5-4baf-483c-bf3e-a58963ec9e53")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 158.7282 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Row 1"
 		(shape input)
 		(at 25.4 83.82 180)
@@ -2281,6 +2391,72 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Row 3"
+		(shape input)
+		(at 167.64 104.14 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "daf9affd-6086-489d-98e8-4ba5aee30cb4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 158.7282 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Col 0"
+		(shape input)
+		(at 203.2 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dcc32070-3fad-496a-89fd-817aa3daf8e5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 211.4465 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Col 1"
+		(shape input)
+		(at 203.2 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e45611cd-119d-4511-b2c5-28a38ed5d862")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 211.4465 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -2335,7 +2511,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 62.23 119.38 90)
 			(effects
 				(font
@@ -2556,7 +2732,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 36.83 62.23 90)
 			(effects
 				(font
@@ -2778,7 +2954,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 87.63 100.33 90)
 			(effects
 				(font
@@ -3279,6 +3455,7 @@
 		)
 	)
 	(symbol
+		(lib_name "SSD1306_0.91_inch_128x32_OLED_Display_1")
 		(lib_id "SSD1306_0.91_inch_128x32_OLED_Display:SSD1306_0.91_inch_128x32_OLED_Display")
 		(at 185.42 139.7 0)
 		(mirror y)
@@ -3287,7 +3464,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6d4ff1c8-3586-4881-82b3-a3881eac6f7b")
+		(uuid "5c1119b6-9697-4d32-9455-bce4b27d8857")
 		(property "Reference" "U2"
 			(at 185.42 135.89 0)
 			(effects
@@ -3296,7 +3473,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "SSD1306_128x32_OLED_Display"
 			(at 185.42 138.43 0)
 			(effects
 				(font
@@ -3332,16 +3509,16 @@
 			)
 		)
 		(pin "2"
-			(uuid "980cdc39-c6da-49f7-b795-292911414bb4")
+			(uuid "084da329-aefd-4057-b00c-dec9ef254f6c")
 		)
 		(pin "4"
-			(uuid "68e1e41e-ea34-4ec9-85c9-e728617b4894")
-		)
-		(pin "1"
-			(uuid "32fe9ed9-22c5-4d69-84e1-4e211ace5d30")
+			(uuid "b7dce9a0-ba5b-4733-82e2-97a91e6a93f3")
 		)
 		(pin "3"
-			(uuid "b6ed5568-cf02-4328-8129-ac979125c681")
+			(uuid "63c3f675-1cab-42f3-8ab0-ed117f769553")
+		)
+		(pin "1"
+			(uuid "bff6c6f0-815c-47dd-bca8-3b55eed7d82d")
 		)
 		(instances
 			(project ""
@@ -3447,7 +3624,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 36.83 119.38 90)
 			(effects
 				(font
@@ -3671,7 +3848,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 36.83 100.33 90)
 			(effects
 				(font
@@ -3759,7 +3936,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 87.63 81.28 90)
 			(effects
 				(font
@@ -3982,7 +4159,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 113.03 81.28 90)
 			(effects
 				(font
@@ -4070,7 +4247,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 62.23 81.28 90)
 			(effects
 				(font
@@ -4294,7 +4471,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 87.63 119.38 90)
 			(effects
 				(font
@@ -4382,7 +4559,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 36.83 81.28 90)
 			(effects
 				(font
@@ -4538,7 +4715,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 113.03 62.23 90)
 			(effects
 				(font
@@ -4626,7 +4803,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 113.03 100.33 90)
 			(effects
 				(font
@@ -4781,7 +4958,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 62.23 100.33 90)
 			(effects
 				(font
@@ -4869,7 +5046,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 113.03 119.38 90)
 			(effects
 				(font
