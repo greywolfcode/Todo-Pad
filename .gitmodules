@@ -7,3 +7,4 @@
 [submodule "pcb/libraries/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty"]
 	path = pcb/libraries/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty
 	url = https://github.com/gorbachev/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty
+

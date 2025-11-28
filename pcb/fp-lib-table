@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "4-pin SSD1306 OLED 128x32")(type "KiCad")(uri "${KIPRJMOD}/libraries/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty")(options "")(descr ""))
+)

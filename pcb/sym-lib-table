@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "OFL")(type "KiCad")(uri "${KIPRJMOD}/libraries/OPL_Kicad_Library/Seeed Studio XIAO Series Library/Seeed_Studio_XIAO_Series.kicad_sym")(options "")(descr ""))
+  (lib (name "SSD1306 0.91{dblquote} 128x32 OLED")(type "KiCad")(uri "${KIPRJMOD}/libraries/KiCad-SSD1306_OLED-0.91-128x32/SSD1306_OLED-0.91-128x32.kicad_sym")(options "")(descr ""))
+  (lib (name "SSD1306_0.91_inch_128x32_OLED_Display")(type "KiCad")(uri "${KIPRJMOD}/libraries/SSD1306_0.91_inch_128x32_OLED_Display/SSD1306_0.91_inch_128x32_OLED_Display.kicad_sym")(options "")(descr ""))
+)
