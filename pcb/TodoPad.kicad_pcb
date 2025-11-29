@@ -9614,7 +9614,7 @@
 		(property "Reference" "U2"
 			(at 1.9 5.91 90)
 			(layer "F.SilkS")
-			(uuid "d5e154a7-0249-4b89-9b57-33e70f0fb695")
+			(uuid "fc1869a5-bc66-4fe4-89dd-cbb861c06c07")
 			(effects
 				(font
 					(size 1 1)
@@ -9625,7 +9625,7 @@
 		(property "Value" "SSD1306_128x32_OLED_Display"
 			(at 18.5 14 0)
 			(layer "F.Fab")
-			(uuid "10ba0e8a-6b09-4361-9e3d-3547b3cacd7b")
+			(uuid "4aa15b50-8dd1-4aec-8f4d-7cfb35a3edf9")
 			(effects
 				(font
 					(size 1 1)
@@ -9637,7 +9637,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f50f4674-bbd6-4bbf-8b03-42f03ce2f335")
+			(uuid "d9709599-61c9-45ce-bd3d-43aa10c2437e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9649,7 +9649,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7ca9dc43-02fd-48cf-b229-8ce1afa12929")
+			(uuid "e1d1ffba-92df-4fc2-921e-f5937a76e6f8")
 			(effects
 				(font
 					(size 1.27 1.27)
