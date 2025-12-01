@@ -36,7 +36,7 @@ The layout editor provides a way to create the keys.keyconfig files used to defi
 - XIAO RP2040: 1x
 - Cherry MX Switches: 14x
 - White DSA Keycaps: 14x
-- 1N4148 DO-35 Diodes: 14x
+- 1N4148 Diodes: 14x
 - SSD1306 0.91" 128x32 OLED Display: 1x
 - PCB: 1x
 - 3D Printed Case: 1x
