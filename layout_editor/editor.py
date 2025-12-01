@@ -129,7 +129,7 @@ class Editor_Menu(ttk.Frame):
         self.buttons[10].grid(row=2, column = 1)
         self.buttons[11] = ttk.Button(self.macropad, command=lambda:self.set_selected(11))
         self.buttons[11].grid(row=2, column = 2)
-        self.buttons[12] = ttk.Button(self.macropad, command=lambda:self.set_selected(11))
+        self.buttons[12] = ttk.Button(self.macropad, command=lambda:self.set_selected(12))
         self.buttons[12].grid(row=2, column = 3)
         self.macropad.pack()
         #define button id input box
@@ -153,10 +153,11 @@ class Editor_Menu(ttk.Frame):
     def save_file(self):
         #get file path
         filename = filedialog.asksaveasfilename(defaultextension=".keyconfig", filetypes=(("All Files", ".*"), ("Key Configuration Files", ".keyconfig")))
-        data = keyconfig.write_storage_file(self.button_values, self.layers)
-        #write data to file
-        with open(filename, "wb") as file:
-            file.write(data)
+        if filename != "":
+            data = keyconfig.write_storage_file(self.button_values, self.layers)
+            #write data to file
+            with open(filename, "wb") as file:
+                file.write(data)
     def change_layer(self):
         #save current name
         self.layers[self.current_layer] = self.layer_value.get()
