@@ -20,7 +20,6 @@ class Main(tk.Tk):
         self.config(menu=menu_bar)
         menu_file = tk.Menu(menu_bar)
         #menu_help = tk.Menu(menu_bar)
-        menu_file.add_command(label='Main Menu', command=lambda: self.new_page(Editor_Menu))
         menu_file.add_command(label='Exit Program', command=lambda: self.destroy())
         menu_bar.add_cascade(menu=menu_file, label='File')
         #menu_bar.add_cascade(menu=menu_help, label='Help')

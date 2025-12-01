@@ -1,0 +1,4 @@
+*.step binary
+*.kicad_pcb binary
+*.kicad_pro binary
+*.dxf binary
