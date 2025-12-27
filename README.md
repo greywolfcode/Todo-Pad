@@ -24,7 +24,7 @@ And here is the PCB:
 <img src=images/pcb.png alt="PCB" width="600"/>
 
 ## Firmware
-Todo pad is controlled using [KMK](https://github.com/KMKfw/kmk_firmware). It has functionality for Unicode and three seperate key layers. A keys.keyconfig file is used to store layouts.
+Todo pad is controlled using [KMK](https://github.com/KMKfw/kmk_firmware). It has functionality for Unicode and three seperate key layers. A keys.keyconfig file is used to store layouts, and an example is provided with the firmware.
 
 ### Layout Editor
 The layout editor provides a way to create the keys.keyconfig files used to define the key layouts for the Todo Pad. It is not the most complicated program, but it works.
