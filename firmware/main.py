@@ -66,7 +66,7 @@ if os.path.exists("keys.keyconfig"):
             try:
                 #check for layer or button header
                 header = file.read(1)
-                if header == b"\0x2": # read layer
+                if header == b"\x02": # read layer
                     keymap.append([])
                     layer_names.append(file.read(20).decode("utf-8"))
                     #top row of buttons is same for all
@@ -84,6 +84,8 @@ if os.path.exists("keys.keyconfig"):
                         keymap[-1].append(KC.get(button_value, KC.TRANS))
                     elif button_type == u_header:
                         keymap[-1].append(KC.MACRO(button_value))
+                elif header == b'\x03':
+                    break
             except:
                 break
         #update final layer switch to loop back to the begining

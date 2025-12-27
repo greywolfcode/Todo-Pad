@@ -20,6 +20,8 @@ class Main(tk.Tk):
         self.config(menu=menu_bar)
         menu_file = tk.Menu(menu_bar)
         #menu_help = tk.Menu(menu_bar)
+        menu_file.add_command(label='Open File', command=lambda: self.current_frame.load_file())
+        menu_file.add_command(label='Save File', command=lambda: self.current_frame.save_file())
         menu_file.add_command(label='Exit Program', command=lambda: self.destroy())
         menu_bar.add_cascade(menu=menu_file, label='File')
         #menu_bar.add_cascade(menu=menu_help, label='Help')
@@ -52,6 +54,7 @@ class Editor_Menu(ttk.Frame):
         #storage for button values. stores button values inside value for each layer
         self.button_values = {
             0: {
+                0: " ",
                 1: " ",
                 2: " ",
                 3: " ",
@@ -62,9 +65,10 @@ class Editor_Menu(ttk.Frame):
                 8: " ",
                 9: " ",
                 10: " ",
-                11: " ",
-            },
+                11: " ",            
+                },
             1: {
+                0: " ",
                 1: " ",
                 2: " ",
                 3: " ",
@@ -76,8 +80,9 @@ class Editor_Menu(ttk.Frame):
                 9: " ",
                 10: " ",
                 11: " ",
-            },
+               },
             2: {
+                0: " ",
                 1: " ",
                 2: " ",
                 3: " ",
@@ -100,7 +105,9 @@ class Editor_Menu(ttk.Frame):
         self.layer_value.set("Layer 1")
         self.layer_name_input = ttk.Entry(self.modifers, textvariable=self.layer_value)
         self.layer_name_input.grid(row=0, column=2)
-        self.layer_buttons = ttk.Button(self.modifers, text="Change Layer", command=lambda:self.change_layer())
+        #add enter key event
+        self.layer_name_input.bind('<Return>', lambda x: self.layer_return())
+        self.layer_buttons = ttk.Button(self.modifers, text="Change Layer", command=lambda: self.change_layer())
         self.layer_buttons.grid(row = 0, column = 3)
         self.modifers.pack()
         #define buttons on keypad
@@ -120,44 +127,65 @@ class Editor_Menu(ttk.Frame):
         self.buttons[6] = ttk.Button(self.macropad, command=lambda:self.set_selected(6))
         self.buttons[6].grid(row=1, column = 2)
         self.buttons[7] = ttk.Button(self.macropad, command=lambda:self.set_selected(7))
-        self.buttons[7].grid(row=1, column = 0)
+        self.buttons[7].grid(row=1, column = 3)
         self.buttons[8] = ttk.Button(self.macropad, command=lambda:self.set_selected(8))
-        self.buttons[8].grid(row=1, column = 3)
+        self.buttons[8].grid(row=2, column = 0)
         self.buttons[9] = ttk.Button(self.macropad, command=lambda:self.set_selected(9))
-        self.buttons[9].grid(row=2, column = 0)
+        self.buttons[9].grid(row=2, column = 1)
         self.buttons[10] = ttk.Button(self.macropad, command=lambda:self.set_selected(10))
-        self.buttons[10].grid(row=2, column = 1)
+        self.buttons[10].grid(row=2, column = 2)
         self.buttons[11] = ttk.Button(self.macropad, command=lambda:self.set_selected(11))
-        self.buttons[11].grid(row=2, column = 2)
-        self.buttons[12] = ttk.Button(self.macropad, command=lambda:self.set_selected(12))
-        self.buttons[12].grid(row=2, column = 3)
+        self.buttons[11].grid(row=2, column = 3)
         self.macropad.pack()
         #define button id input box
         self.entry_label = ttk.Label(self, text='Current Value:')
         self.entry_label.pack()
         self.button_value = tk.StringVar()
         self.entry_box = ttk.Entry(self, textvariable=self.button_value)
+        self.entry_box.bind('<Return>', lambda x: self.button_return())
         self.entry_box.pack()
         #define save button
         self.save_button = ttk.Button(self, text ="Save File", command=lambda:self.save_file())
         self.save_button.pack()
-    def set_selected(self, button_num):
+    def reset_button(self):
         #renable currently selected button
         self.buttons[self.selected_button].config(state=tk.NORMAL)
+        #save current layer
         self.save_button_value()
+    def set_selected(self, button_num):
+        self.reset_button()
+        #update current button number
         self.selected_button = button_num
         #disable new button
         self.buttons[self.selected_button].config(state=tk.DISABLED)
         #change current text
         self.button_value.set(self.button_values[self.current_layer][button_num])
+        #move cursor back to entry box
+        self.entry_box.focus_set()
     def save_file(self):
         #get file path
-        filename = filedialog.asksaveasfilename(defaultextension=".keyconfig", filetypes=(("All Files", ".*"), ("Key Configuration Files", ".keyconfig")))
+        filename = filedialog.asksaveasfilename(defaultextension=".keyconfig", filetypes=(("Key Configuration Files", ".keyconfig"), ("All Files", ".*")))
         if filename != "":
             data = keyconfig.write_storage_file(self.button_values, self.layers)
             #write data to file
             with open(filename, "wb") as file:
                 file.write(data)
+    def load_file(self):
+        #get file name
+        filename = filedialog.askopenfilename(defaultextension=".keyconfig", filetypes=(("Key Configuration Files", ".keyconfig"), ("All Files", ".*")))
+        #cehck if file was selected
+        if filename == "":
+            return
+        #read file
+        self.layers, self.button_values = keyconfig.read_storage_file(filename)
+        #set default text
+        self.current_layer = 0
+        self.button_value.set(self.button_values[self.current_layer][0])
+        self.layer_value.set(self.layers[self.current_layer])
+        #set button names
+        for num in range(0, 12):
+            self.buttons[num].config(text=self.button_values[self.current_layer][num])
+        self.set_selected(0)
     def change_layer(self):
         #save current name
         self.layers[self.current_layer] = self.layer_value.get()
@@ -172,9 +200,22 @@ class Editor_Menu(ttk.Frame):
         self.layer_value.set(self.layers[self.current_layer])
         #set selected button to current button to reset the button value
         self.button_value.set(self.button_values[self.current_layer][self.selected_button])
+        #update button names
+        for num in range(0, 12):
+            self.buttons[num].config(text=self.button_values[self.current_layer][num])
+        #move cursor back to entry box
+        self.entry_box.focus_set()
     def save_button_value(self):
         self.button_values[self.current_layer][self.selected_button] = self.button_value.get()
-
+        #update button text to be its value
+        self.buttons[self.selected_button].config(text=self.button_value.get())
+    def layer_return(self):
+        self.focus_set()
+    def button_return(self):
+        if self.selected_button == 11:
+            self.set_selected(0)
+        else:
+            self.set_selected(self.selected_button + 1)
 
 #create new app
 app = Main()
